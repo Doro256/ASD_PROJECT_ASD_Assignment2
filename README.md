@@ -1,16 +1,12 @@
 # ASD Predictive Modeling with Explainable AI (XAI)
 
-Building upon our theoretical framework and Exploratory Data Analysis (EDA), our group
-will now train predictive models. The goal of this phase is to build a deep intuition of algorithm
-selection , evaluate models rigorously against class imbalance using PR-AUC , and use
-Explainable AI (SHAP) to translate black-box predictions into actionable business or theoretical
-insights.
+This project builds upon the theoretical framework and Exploratory Data Analysis (EDA) to develop predictive models for the dataset. The objective is to gain a deeper understanding of algorithm selection, perform rigorous model evaluation, and apply Explainable AI techniques to interpret model predictions.
 ---
 
 ## Project Structure
 
 ```
-asd-poject_asd assignment 2/
+asd-poject_asd assignment2/
 ├── data/                         # Dataset (not tracked — see note below)
 │   └── asd.csv
 ├── src/
@@ -88,7 +84,7 @@ behavior and individual predictions:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/asd-poject_asd assignment 2.git
+git clone https://github.com/YOUR_USERNAME/asd-project_asd_assignment2.git
 cd asd-prediction-xai
 ```
 
