@@ -1,4 +1,4 @@
-# ASD Predictive Modeling with Explainable AI (XAI)
+# ASD (Autism Spectrum Disorder) Predictive Modeling with Explainable AI (XAI)
 
 This project builds upon the theoretical framework and Exploratory Data Analysis (EDA) to develop predictive models for the dataset. The objective is to gain a deeper understanding of algorithm selection, perform rigorous model evaluation, and apply Explainable AI techniques to interpret model predictions.
 ---
