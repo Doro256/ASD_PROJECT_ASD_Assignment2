@@ -55,6 +55,16 @@ df[TARGET_COL] = LabelEncoder().fit_transform(df[TARGET_COL])
 print("\nTarget class distribution (raw):")
 print(df[TARGET_COL].value_counts())
 
+# Target Class Distribution Plot
+plt.figure(figsize=(6,4))
+sns.countplot(x=df[TARGET_COL])
+plt.title("Target Class Distribution (Diagnosed ASD)")
+plt.xlabel("ASD Diagnosis (0 = No ASD, 1 = ASD)")
+plt.ylabel("Count")
+plt.tight_layout()
+plt.savefig("../outputs/target_class_distribution.png", dpi=150)
+plt.show()
+
 # Features / Target split
 X = df.drop(TARGET_COL, axis=1)
 y = df[TARGET_COL]
@@ -63,6 +73,33 @@ y = df[TARGET_COL]
 numeric_cols = X.select_dtypes(include=['int64', 'float64']).columns
 scaler = StandardScaler()
 X[numeric_cols] = scaler.fit_transform(X[numeric_cols])
+
+# Numeric Feature Distributions by ASD Diagnosis
+for feature in numeric_cols_raw:
+    plt.figure(figsize=(6,4))
+    sns.histplot(data=df, x=feature, hue=TARGET_COL, bins=30, kde=True)
+    plt.title(f"{feature} Distribution by ASD Diagnosis")
+    plt.xlabel(feature)
+    plt.ylabel("Frequency")
+    plt.tight_layout()
+    plt.savefig(f"../outputs/{feature}_distribution.png", dpi=150)
+    plt.show()
+
+# Feature Correlation Heatmap
+plt.figure(figsize=(10,8))
+corr_matrix = df.corr()
+
+sns.heatmap(
+    corr_matrix,
+    annot=True,
+    cmap="coolwarm",
+    fmt=".2f",
+    linewidths=0.5
+)
+plt.title("Feature Correlation Heatmap")
+plt.tight_layout()
+plt.savefig("../outputs/feature_correlation_heatmap.png", dpi=150)
+plt.show()
 
 # PART 1 — ALGORITHM SELECTION & TRAINING
 print("\n")
