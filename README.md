@@ -7,24 +7,13 @@ This project builds upon the theoretical framework and Exploratory Data Analysis
 
 ```
 asd-poject_asd assignment2/
-├── data/                         # Dataset (not tracked — see note below)
+├── data/                         # Dataset (not tracked because raw data was not uploaded)
 │   └── asd.csv
 ├── src/
 │   └── asd_modeling.py           # Main modeling script
 ├── notebooks/
-│   └── asd_modeling.ipynb        # Colab/Jupyter version (optional)
+│   └── asd_modeling.ipynb        # Colab/Jupyter
 ├── outputs/                      # Generated plots and figures
-│   ├── 01_target_distribution.png
-│   ├── 02_boxplots.png
-│   ├── 03_correlation_heatmap.png
-│   ├── 04_pr_curves.png
-│   ├── 05_confusion_matrices.png
-│   ├── 06_model_comparison.png
-│   ├── 07_shap_summary.png
-|   ├── 08_shap_bar.png
-|   ├── 09_shap_waterfall_asd.png
-|   ├── 10_shap_waterfall_noasd.png
-|   └── 11_shap_dependence.png
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -61,7 +50,7 @@ The pipeline covers:
 
 **Primary metric: PR-AUC** (Precision-Recall Area Under Curve)
 
-Standard accuracy is misleading for imbalanced datasets. PR-AUC focuses
+Standard accuracy is misleading for imbalanced datasets yet PR-AUC focuses
 specifically on the minority (ASD=Yes) class, making it the right metric
 for clinical screening tasks where missed diagnoses carry high real-world cost.
 
@@ -135,4 +124,4 @@ Part 1: Algorithm Selection & Training
 Part 2: Advanced Evaluation Metrics
 Part 3: Model Interpretability (Explainable AI)
 
-**Platform:** Python 3 (VS Code / Google Colab compatible)
+**Platform:** Python 3 (VS Code / Google Colab compatible/PyCharm)

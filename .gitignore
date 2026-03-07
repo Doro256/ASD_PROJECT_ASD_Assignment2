@@ -1,38 +1,22 @@
-# ── Data (excluded from version control) ──
+#  Data
 data/
 
-# ── Python ──────────────────────────────────────────────────
+# Python
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
-*.egg
-*.egg-info/
-dist/
-build/
-.eggs/
 
-# ── Virtual Environments ─────────────────────────────────────
+# Virtual environments
 venv/
 env/
-.env
 .venv/
 
-# ── Jupyter / IPython ────────────────────────────────────────
+# Jupyter
 .ipynb_checkpoints/
-*.ipynb_checkpoints
 
-# ── IDE ───────────────────────────────────────────────────────
+# IDE
 .vscode/
 .idea/
-*.suo
-*.user
 
-# ── OS ────────────────────────────────────────────────────────
+# OS
 .DS_Store
 Thumbs.db
-desktop.ini
-
-# ── Output plots (optional — remove these lines if you want
-#    to track generated images in the repo) ───────────────────
-# outputs/
